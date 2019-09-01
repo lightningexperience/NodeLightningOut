@@ -3,8 +3,8 @@ var express = require('express');
 var port = process.env.PORT || 3000;
 
 var org = nforce.createConnection({
-  clientId: '3MVG9vtcvGoeH2bgu3.LaQ3GvugciNjOTWoWXq4R9zMp2YPQUsMvXI0JE1nIFbJCV0I5vNX39bzXQejr6ecFu',
-  clientSecret: '35FCA3CA65AC45B6C3B2E0AB82DDFA87CD2DE58B083C670B2F14E9D9520C73E0',
+  clientId: process.env.CONSUMER_KEY,
+  clientSecret: process.env.CONSUMER_SECRET,
   redirectUri: 'https://my-ui-integration.herokuapp.com/oauth/_callback',
   apiVersion: 'v45.0',  // optional, defaults to current salesforce API version
   environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default

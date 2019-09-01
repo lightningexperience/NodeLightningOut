@@ -5,8 +5,8 @@ var port = process.env.PORT || 3000;
 var org = nforce.createConnection({
   clientId: process.env.CONSUMER_KEY,
   clientSecret: process.env.CONSUMER_SECRET,
-  redirectUri: 'https://my-ui-integration.herokuapp.com',
-  apiVersion: 'v34.0',  // optional, defaults to current salesforce API version
+  redirectUri: process.env.CALLBACK_URL,
+  apiVersion: 'v45.0',  // optional, defaults to current salesforce API version
   environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default
   mode: 'multi' // optional, 'single' or 'multi' user mode, multi default
 });

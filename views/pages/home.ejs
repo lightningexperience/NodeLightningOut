@@ -15,9 +15,9 @@
         <footer>
         </footer>
         <script>
-          var url = "<%= ouathLightningURL %>";
-          var token = "Bearer "+"<%= oauthtoken %>";
-          console.log(token);
+          var url = "<%= app.locals.lightningEndPointURI %>";
+          var token = "Bearer "+"<%= app.locals.oauthtoken %>";
+          console.log('url');
             $Lightning.use("c:ui_integration", function() {
                   $Lightning.createComponent("c:helloworld", {msg: "It works (LWC)!"},
                      "leaderboard",

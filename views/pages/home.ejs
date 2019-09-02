@@ -19,10 +19,10 @@
           var token = "Bearer "+"<%= oauthtoken %>";
           console.log(token);
             $Lightning.use("c:ui_integration", function() {
-                  $Lightning.createComponent("c:helloworld", {},
+                  $Lightning.createComponent("c:helloworld", {msg: "It works (LWC)!"},
                      "leaderboard",
                       function(cmp) {
-                         // do some stuff
+                        console.log("LWC component was created");
                       });
             },url,token );
         </script>

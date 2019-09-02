@@ -8,7 +8,7 @@
     </header>
     <main>
       <div >
-        <p>Sales Leaderboard On Heroku</p>
+        <p>Lightning Out Demo</p>
         <div id="leaderboard"></div>
           </div>
       </main>
@@ -18,8 +18,8 @@
           var url = "<%= ouathLightningURL %>";
           var token = "Bearer "+"<%= oauthtoken %>";
           console.log(token);
-            $Lightning.use("SEDreamin:SalesLeaderBoardVfApp", function() {
-                  $Lightning.createComponent("SEDreamin:SalesLeaderMain", {},
+            $Lightning.use("c:ui_integration", function() {
+                  $Lightning.createComponent("c:hello", {},
                      "leaderboard",
                       function(cmp) {
                          // do some stuff

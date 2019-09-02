@@ -33,6 +33,8 @@ app.get('/oauth/_callback', function(req, res) {
       console.log('Access Token: ' + resp.access_token);
       app.locals.oauthtoken = resp.access_token;
       app.locals.lightningEndPointURI = process.env.LIGHTNING_URL;
+      console.log('Access Token: ' + app.locals.oauthtoken);
+      console.log('Access Token: ' +  app.locals.lightningEndPointURI);
       res.redirect('/home');
     } else {
       console.log('Error: ' + err.message);

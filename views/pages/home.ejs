@@ -19,7 +19,7 @@
           var token = "<%= oauthtoken %>";
           console.log(url);
             $Lightning.use("c:ui_integration", function() {
-                  $Lightning.createComponent("c:helloworld", {msg: "It works (LWC)!"},
+                  $Lightning.createComponent("c:wirelistview", {},
                      "leaderboard",
                       function(cmp) {
                         console.log("LWC component was created");
